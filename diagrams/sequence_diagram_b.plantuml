@@ -1,0 +1,19 @@
+@startuml
+
+":TestCase" -> ":Juego": haGanado(j1)
+":Juego" -> ":Tablero": haCompletadoLinea(j1)
+loop [para cada linea]
+        ":Tablero" -> ":Linea3": todasLasFichasSonDe(j1)
+        loop [para cada celda]
+                ":Linea3" -> ":Jugador": miFicha()
+                return ficha-j1
+                ":Linea3" -> ":Celda": contiene(ficha-j1)
+                ":Celda" -> "contenido :Ficha": igualA(ficha-j1)
+                return true
+        end
+        ":Linea3" --> ":Tablero": true
+end
+":Tablero" --> ":Juego": true
+":Juego" --> ":TestCase": true
+
+@enduml

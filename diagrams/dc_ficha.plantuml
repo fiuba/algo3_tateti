@@ -1,0 +1,15 @@
+@startuml
+
+class Ficha {
+        - caracter : Chart
+        
+        + igualA(otra : Ficha) : Boolean
+}
+
+class Vacio {
+        + igualA(otra : Ficha) : Boolean
+}
+
+Ficha <|-- Vacio
+
+@enduml
