@@ -7,7 +7,7 @@ class Ficha {
 }
 
 class Vacio {
-        + igualA(otra : Ficha) : Boolean
+        + inicializar()
 }
 
 Ficha <|-- Vacio

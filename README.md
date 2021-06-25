@@ -4,11 +4,17 @@
 
 # Diagramas
 
-## Clases
+## Clases gral. 
 
 ![dc](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/fiuba/algo3_tateti/master/diagrams/dc.plantuml?token=AA6ASD6PK57WZ76BGFD6MF3A2PRGC)
 
-![dc2](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/fiuba/algo3_tateti/master/diagrams/dc_ficha.plantuml?token=AA6ASDYJCMYAZPN7YZ7B6JLA2PRXW)
+## Diagrama de clases Jugadores 
+
+![dc2](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/fiuba/algo3_tateti/master/diagrams/dc_jugador.plantuml)
+
+## Diagrama de clases fichas
+
+![dc3](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/fiuba/algo3_tateti/master/diagrams/dc_ficha.plantuml)
 
 ## Secuencia
 

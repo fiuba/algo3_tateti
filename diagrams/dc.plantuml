@@ -38,5 +38,5 @@ Tablero *-- "8" Linea3
 Jugador o- "*" Ficha
 Linea3 "3" o- Celda
 Celda o- "0..1" Ficha
-
+Tablero *- "9" Celda
 @enduml

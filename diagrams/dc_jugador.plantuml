@@ -1,0 +1,31 @@
+@startuml
+
+interface Jugador {
+        + miFicha() : Ficha
+        + dondeJuego() : DirCelda
+}
+
+class JugadorAI {
+        + miFicha() : Ficha
+        + dondeJuego() : DirCelda
+}
+
+class JugadorHumano {
+        + miFicha() : Ficha
+        + proximaJugada(dir : DirCelda)
+        + dondeJuego() : DirCelda
+}
+
+class Ficha {
+        - caracter : Chart
+        
+        + igualA(otra : Ficha) : Boolean
+}
+
+Jugador <|.. JugadorHumano
+Jugador <|.. JugadorAI
+
+Jugador *- "*" Ficha
+
+JugadorAI *- "1" JugadorHumano
+@enduml
