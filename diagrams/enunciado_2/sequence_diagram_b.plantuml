@@ -1,0 +1,28 @@
+@startuml
+
+":TestCase" -> ":Juego": haGanado(cruz)
+":Juego" -> ":Tablero": haCompletadoLinea(cruz)
+loop [para cada linea]
+        ":Tablero" -> ":Linea3": todasLasFichasSonDe(cruz)
+        loop [para cada celda]
+                ":Linea3" -> ":Jugador": miFicha()
+                return ficha-cruz
+                ":Linea3" -> ":Celda": contiene(ficha-cruz)
+                ":Celda" -> "contenido :Ficha": igualA(ficha-cruz)
+                group funcionoComo
+                        "contenido :Ficha" -> "contenido :Ficha": funcionoComo
+                        "contenido :Ficha" -> "celdaDondeMeAgregaron :Celda": tieneColumnaPar
+                        "contenido :Ficha" -> "fichasEnColumna2 :Linea3": hayNumeroParDeOpuestos
+                        "contenido :Ficha" -> "contenido :Ficha": opuesta
+                        create "cruz :Ficha"
+                        "contenido :Ficha" -> "cruz :Ficha": new
+                end
+                "contenido :Ficha" -> "cruz :Ficha": igualA(contenido)
+                return true
+        end
+        ":Linea3" --> ":Tablero": true
+end
+":Tablero" --> ":Juego": true
+":Juego" --> ":TestCase": true
+
+@enduml
