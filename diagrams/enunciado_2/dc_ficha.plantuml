@@ -1,0 +1,31 @@
+@startuml
+
+class Ficha {
+        - caracter : Chart
+        
+        + igualA(otra : Ficha) : Boolean
+        + contextoDeY(l : Linea3, c : Celda) : Ficha
+        + funcionoComo() : Ficha
+        + hayNumeroParDeOpuestos() : Ficha
+        + opuesta() : Ficha
+}
+
+class Linea3 {
+        + todasLasFichasSonDe(j : Jugador) : Boolean
+        + hayNumeroParDeOpuestos(f : Ficha) : Boolean
+}
+
+class Celda {
+        - contenido : Ficha
+        + contiene(f : Ficha) : Boolean
+        + tieneColumnaPar() : Boolean
+}
+
+class Vacio {
+        + inicializar()
+}
+
+Vacio --|> Ficha
+Ficha o- Linea3: "fichasEnColumna2 >"
+Ficha o- Celda: "celdaDondeMeAgregaron >"
+@enduml
